@@ -1,0 +1,94 @@
+@fadeBlack: rgba(0,0,0,0.8);
+@fadeWhite: rgba(255,255,255,0.8);
+@color_alert: #ED5565;
+@color_success: #A0D468;
+@color_attention : #F6BB42;
+@color_info : #5D9CEC;
+@colors : @color_alert, @color_success, @color_attention, @color_info;
+@names  : error, success, attention, info;
+@length : length(@colors);
+
+
+
+
+.topbox {
+	transition: all .5s ease-out;
+	background: linear-gradient(90deg,@fadeBlack,transparent,@fadeBlack,@fadeWhite);
+	margin: 25px auto;
+    color: @fadeWhite;
+  	@media screen {
+    	height: 100px;
+    	@media (min-width: 768px) {
+      		height: 50px;
+      		background-color: @color_attention;
+    	}
+  	}
+	a{
+		span{
+			margin: auto;
+			text-align: center;
+			color: @fadeWhite;
+			padding: 5px;
+			font-size: 2em;
+		}
+	}
+}
+
+
+
+.contentbox{
+	padding: 5px;
+	.fullwidth{
+		margin: 25px auto;
+		width: 100%;
+		height: 10vh;
+		@media screen {
+			background-color: @fadeBlack;
+			@media (min-width: 768){
+				background-color: #ED5565;
+			}
+		}
+	}
+	.carousel{
+		display: flex;
+		// flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+
+		.smalldiv{
+			width: 33%;
+			background-color: @fadeBlack; 
+			height: 50px;
+		}
+	}
+}
+
+.alert-variation(@names; @colors; @index) when (iscolor(extract(@colors, @index))) and (@index > 0) {
+    .alert-variation(@names; @colors; (@index - 1)); // decrement.
+
+  @name  : extract(@names, @index);
+  @color : extract(@colors, @index);
+ 
+  .alert-@{name} {
+    border-color: darken(@color, 10%);
+    color: darken(@color, 30%);
+    background-color: @color;
+  }
+ 
+}
+.alert-variation(@names; @colors; @length);
+
+
+.screen-color {
+  @media screen {
+    color: green;
+    @media (min-width: 768px) {
+      color: red;
+    }
+  }
+  @media tv {
+    color: black;
+  }
+}
+
+

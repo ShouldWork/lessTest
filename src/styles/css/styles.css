@@ -1,0 +1,107 @@
+/* line 14, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.topbox {
+  transition: all 0.5s ease-out;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+  margin: 25px auto;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media screen {
+  /* line 19, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .topbox {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 21, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .topbox {
+    height: 50px;
+    background-color: #f6bb42;
+  }
+}
+/* line 27, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.topbox a span {
+  margin: auto;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  font-size: 2em;
+}
+/* line 39, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.contentbox {
+  padding: 5px;
+}
+/* line 41, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.contentbox .fullwidth {
+  margin: 25px auto;
+  width: 100%;
+  height: 10vh;
+}
+@media screen {
+  /* line 45, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .contentbox .fullwidth {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+@media screen and (min-width: 768) {
+  /* line 47, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .contentbox .fullwidth {
+    background-color: #ED5565;
+  }
+}
+/* line 52, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.contentbox .carousel {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+/* line 58, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.contentbox .carousel .smalldiv {
+  width: 33%;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 50px;
+}
+/* line 72, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.alert-error {
+  border-color: #e8273b;
+  color: #99101f;
+  background-color: #ed5565;
+}
+/* line 72, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.alert-success {
+  border-color: #87c940;
+  color: #537f24;
+  background-color: #a0d468;
+}
+/* line 72, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.alert-attention {
+  border-color: #f4a911;
+  color: #986807;
+  background-color: #f6bb42;
+}
+/* line 72, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+.alert-info {
+  border-color: #2f80e7;
+  color: #12509e;
+  background-color: #5d9cec;
+}
+@media screen {
+  /* line 83, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .screen-color {
+    color: green;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 85, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .screen-color {
+    color: red;
+  }
+}
+@media tv {
+  /* line 89, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
+  .screen-color {
+    color: black;
+  }
+}
