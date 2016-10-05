@@ -38,27 +38,49 @@
 
 .contentbox{
 	padding: 5px;
+	background-color: @color_success;
 	.fullwidth{
+		transition: all .25s ease-out;
 		margin: 25px auto;
 		width: 100%;
 		height: 10vh;
-		@media screen {
-			background-color: @fadeBlack;
-			@media (min-width: 768){
-				background-color: #ED5565;
-			}
-		}
+	  	@media screen {
+	    	height: 100px;
+	      	background-color: @color_info;
+	    	@media (min-width: 768px) {
+	      		height: 50px;
+	      		background-color: @color_attention;
+	    	}
+	  	}
 	}
 	.carousel{
+		transition: all .25s ease-in;
 		display: flex;
-		// flex-direction: column;
 		justify-content: space-around;
 		align-content: center;
-
+		@media screen {
+			flex-flow: column wrap;
+	    	@media (min-width: 768px) {
+				flex-flow: row wrap;
+	    	}
+	  	}
 		.smalldiv{
-			width: 33%;
+			transition: all 5s ease-out;
 			background-color: @fadeBlack; 
 			height: 50px;
+			@media screen {
+				color: @fadeWhite;
+				width: 100%;
+				margin-bottom: 15px;
+				@media (min-width: 768px) {
+					width: 33%;
+					color: @color_info;
+		    	}
+		  	}
+		  	span{
+		  		text-align: center;
+		  		padding: 10px;
+		  	}
 		}
 	}
 }
@@ -77,18 +99,5 @@
  
 }
 .alert-variation(@names; @colors; @length);
-
-
-.screen-color {
-  @media screen {
-    color: green;
-    @media (min-width: 768px) {
-      color: red;
-    }
-  }
-  @media tv {
-    color: black;
-  }
-}
 
 
