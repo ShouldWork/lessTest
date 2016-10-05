@@ -78,7 +78,7 @@
 }
 /* line 67, C:\Users\i54626\Desktop\Case store\Projects\Web Dev\lessTest\src\styles\styles.less */
 .contentbox .carousel .smalldiv {
-  transition: all 5s ease-out;
+  transition: all 0.25s ease-out;
   background-color: rgba(0, 0, 0, 0.8);
   height: 50px;
 }
